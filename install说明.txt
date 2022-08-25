@@ -1,0 +1,52 @@
+1.建立一个空目录执行以下命令,前面一定要用cnpm而不是npm
+cnpm install antd --save
+cnpm install antd-init --save
+
+其他组件
+cnpm install react-router@3.0.5 --save  路由组件
+cnpm install browser-history --save   地址栏路由组件
+cnpm install dora-plugin-browser-history  地址栏路由组件
+cnpm install recharts --save 图表组件
+cnpm install react-quill@v1.0.0-beta-4 --save 编辑框组件
+cnpm install react-syntax-highlighter --save
+cnpm install reqwest --save
+cnpm install react-codemirror --save
+cnpm install react-fa --save
+cnpm install react-dnd --save
+cnpm install react-dnd-html5-backend --save
+
+在目录下运行,通常情况下放入admin,index.js文件后执行antd-init系统会自动install所有其他依赖组件，不用一个一个cnpm install
+antd-init 自动生成antd的demo文件，同时会自动安装react等其他模块，只要文件中有引用的会自动安装.
+
+
+2.更新antd安装包需要修改package.json的ant-d依赖
+ cnpm install antd --save 重新安装就会自动更新到最新版本的antd
+
+3.启动的package.json  start 命令中增加: "start": "dora --plugins webpack,browser-history", browser-history用来启动地址栏路由
+
+4.通过theme.js文件来修改css和图标的地址,package.json中增加一行   "theme": "./theme.js",
+  
+  theme.js文件中的内容为：
+  module.exports = () => {
+  return {
+    '@primary-color': '#000000',
+    '@link-color': '#1DA57A',
+    '@border-radius-base': '2px',
+    '@icon-url': '"/assets/fonts/iconfont/iconfont"',
+  };
+ };
+
+5.webpack.config.js中的style:"css" 改为 style: true,
+
+6.打包输出命令为: npm run build
+
+7.启动命令为 npm start
+
+8.打包内存溢出解决方法
+打开项目目录下node_modules的子目录.bin，找到atool-build.cmd这个命令文件把
+ node "%~dp0\..\_atool-build@0.9.3@atool-build\bin\atool-build" %*
+改为
+ node  --max_old_space_size=4096  "%~dp0\..\_atool-build@0.9.3@atool-build\bin\atool-build" %*
+
+
+

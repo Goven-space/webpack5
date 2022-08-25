@@ -1,0 +1,1 @@
+const menuList = (params) => get('/rest/core/appmenu/item/page', params)

@@ -1,0 +1,60 @@
+﻿{
+  "state": true,
+  "pageNo": 1,
+  "totalPages": 1,
+  "pageSize": 15,
+  "total": 4,
+  "isHavePrePage": false,
+  "isHaveNextPage": false,
+  "customArgs": "",
+  "rows": [
+    {
+      "gatewayAppId": "demo",
+      "gatewayAppName": "网关功能演示",
+      "id": "5ca45db36761ef5f524ab55f",
+      "appId": "core",
+      "createTime": "2019-04-03 15:16:03",
+      "creator": "admin",
+      "creatorName": "管理员",      "editTime": "2019-06-20 23:21:44",
+      "editor": "admin",
+      "editorName": "管理员"
+    },
+    {
+      "gatewayAppId": "1000002",
+      "gatewayAppName": "企业微信应用",
+      "remark": "企业微信中同步建的应用",
+      "id": "5b796533d8e9320e6c0da42a",
+      "appId": "core",
+      "createTime": "2018-08-19 20:40:19",
+      "creator": "admin",
+      "creatorName": "管理员",
+      "editTime": "2019-06-20 23:21:47",
+      "editor": "admin",
+      "editorName": "管理员"
+    },
+    {
+      "gatewayAppId": "bsys",
+      "gatewayAppName": "业务系统",
+      "id": "5b78ddfed8e93244bc06148d",
+      "appId": "gateway",
+      "createTime": "2018-08-19 11:03:26",
+      "creator": "admin",
+      "creatorName": "管理员",
+      "editTime": "2019-03-05 21:51:17",
+      "editor": "admin",
+      "editorName": "管理员"
+    },
+    {
+      "gatewayAppId": "aliyun",
+      "gatewayAppName": "阿里云应用",
+      "id": "5b78dbded8e9323cdc2cdc91",
+      "appId": "gateway",
+      "createTime": "2018-08-19 10:54:22",
+      "creator": "admin",
+      "creatorName": "管理员",
+      "editTime": "2018-08-19 10:54:22",
+      "editor": "admin",
+      "editorName": "管理员"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+
+.apiPortal-menu .ant-menu-horizontal {
+  font-size:20px;
+  font-weight:600;
+  font-family:'Microsoft YaHei';
+  color:#FFFFFF;
+  background:var(--themeColor);
+  border-bottom: 1px solid var(--themeColor);
+}
+
+.apiPortal-menu .ant-menu-horizontal .ant-menu-item-selected{
+  color:#fff;
+  background: #1176d2;
+}
+
+.apiPortal-menu .ant-menu-horizontal .ant-menu-submenu-selected{
+    color:#fff;
+}
+
+.apiPortal-menu .ant-menu-horizontal > .ant-menu-item:hover, .ant-menu-horizontal > .ant-menu-submenu:hover, .ant-menu-horizontal > .ant-menu-item-active, .ant-menu-horizontal > .ant-menu-submenu-active, .ant-menu-horizontal > .ant-menu-item-open, .ant-menu-horizontal > .ant-menu-submenu-open, .ant-menu-horizontal > .ant-menu-item-selected, .ant-menu-horizontal > .ant-menu-submenu-selected {
+	border-bottom: 2px solid #1176d2;
+    background: #1176d2;
+}
+
+.apiPortal-menu .ant-menu-item:hover, .apiPortal-menu .ant-menu-item-active, .apiPortal-menu .ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open, .apiPortal-menu .ant-menu-submenu-active, .apiPortal-menu .ant-menu-submenu-title:hover {
+	color: #F3F781;
+}
+
+.apiManage-home .ant-card.ant-card-bordered.ant-card-hoverable {
+	border-radius: 15px;
+}
+
+.apiManage-home .apiManage-home-content-item{
+	font-size:'9pt';
+	/* width:"90%"; */
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}

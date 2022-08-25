@@ -1,0 +1,33 @@
+<html>
+<header>
+<script src='res/ace/jquery.min.js'></script>
+<script>
+$(function(){
+  var url="http://47.92.110.139:8080/restcloud/rest/core/auth/login";
+  var token;
+  $.post(url,{userName:"api",password:"pass2021"},function(data){
+    token=data.identitytoken; //获得返回的token,可以设置到cookie中去，这样下次请求时不用再登录
+    alert("登录成功的token="+token);
+    testRestAPI(token);
+  });
+});
+
+function testRestAPI(token){
+  var url='http://localhost:8080/restcloud/rest/example/server/info';
+  alert("准备请求url="+url);
+  $.ajax({
+    beforeSend: function(request) {
+	  request.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+      request.setRequestHeader("identitytoken", token);
+    },
+    url:url,
+    type: "get",
+	data:'',
+    success: function (data) {
+      alert(JSON.stringify(data));
+    }
+  });
+}
+</script>
+</header>
+</html>

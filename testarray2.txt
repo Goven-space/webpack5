@@ -1,0 +1,71 @@
+﻿{
+  "ProposalNo": "M00000000267",
+  "AgentId": 26006856753,
+  "BasePremium": 0,
+  "BeforeVatPremium": 600,
+  "BelongToHandlerName": "任永",
+  "BookCurrency": "CNY",
+  "DuePremium": 630,
+  "Vat": 30,
+  "EffectiveDate": "2019-12-13",
+  "ExpiryDate": "2020-12-12T23:59:59",
+  "PolicyId": "1001",
+  "PolicyLobList": [
+    {
+      "BasePremium": 0,
+      "BeforeVatPremium": 600,
+      "DuePremium": 630,
+      "ProductCode": "WTH",
+      "Vat": 30,
+      "PolicyRiskList": [
+        {
+          "Age": 31,
+          "AntiMoneyResultCode": "0",
+          "BasePremium": 0,
+          "BeforeVatPremium": 100,
+          "BenefitModeCode": "1",
+          "CustomerName": "王飞",
+          "CustomerNo": "8013147",
+          "CustomerRoleCode": "2",
+          "DateOfBirth": "1988-05-10",
+          "DuePremium": 105,
+          "EducationCode": "05",
+          "EffectiveDate": "2019-12-13",
+          "ExpiryDate": "2020-12-12T23:59:59",
+          "IndiMobile": "159****0114",
+          "InsuredId": 3008976,
+          "InsuredName": "王飞"
+        },
+        {
+          "Age": 32,
+          "BeforeVatPremium": 200,
+           "BenefitModeCode": "1",
+          "BusinessObjectId": 26004421628,
+          "CustomerName": "张兰",
+          "CustomerNo": "803673100",
+          "CustomerRoleCode": "2",
+          "DateOfBirth": "1987-05-20",
+          "DuePremium": 210,
+          "EducationCode": "05",
+          "EffectiveDate": "2019-12-13",
+          "ExpiryDate": "2020-12-12T23:59:59"
+        },
+        {
+          "Age": 0,
+          "AntiMoneyResultCode": "0",
+          "BasePremium": 0,
+          "BeforeVatPremium": 300,
+          "BenefitModeCode": "1",
+          "CustomerName": "王晨",
+          "CustomerNo": "803566099",
+          "CustomerRoleCode": "2",
+          "DateOfBirth": "2019-01-27",
+          "DuePremium": 315,
+          "EducationCode": "05",
+          "EffectiveDate": "2019-12-13",
+          "ExpiryDate": "2020-12-12T23:59:59"
+        }
+      ]
+    }
+  ]
+}

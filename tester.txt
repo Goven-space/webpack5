@@ -1,0 +1,22 @@
+﻿{
+  "state": true,
+  "pageNo": 1,
+  "totalPages": 1,
+  "pageSize": 15,
+  "total": 4,
+  "isHavePrePage": false,
+  "isHaveNextPage": false,
+  "customArgs": "",
+  "data": [
+    {
+      "sku-code": "10001",
+      "no": 12,
+      "categoryId": 1
+    },
+    {
+      "sku-code": "10002",
+      "no": 22,
+      "categoryId": 0
+    }
+  ]
+}

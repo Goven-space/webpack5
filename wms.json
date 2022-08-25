@@ -1,0 +1,46 @@
+{
+    "request_identifier":"1629897678212093.0",
+    "data":{
+        "purchase_order_ref":"253762_nu-in.com 007-01819-0002",
+        "reception_status":"Received",
+        "reception_number":"1",
+        "warehouse":{
+            "name":"NoLimit",
+            "reference":"NLT",
+            "address":{
+                "address":"No Limit Sp. z o.o. Promyka 153",
+                "zip":"05-800",
+                "city":"Pruszków",
+                "country_iso2_code":"PL",
+                "state":""
+            }
+        },
+        "reception_date":"2021-08-25",
+        "items":[
+            {
+                "reference":"007-01819-0002-023",
+                "ean":"5059626112791",
+                "qnt_expected":38,
+                "qnt_accepted":37,
+                "qnt_not_accepted":0,
+                "received_date":"2021-08-25"
+            },
+            {
+                "reference":"007-01819-0002-020",
+                "ean":"5059626112760",
+                "qnt_expected":98,
+                "qnt_accepted":93,
+                "qnt_not_accepted":0,
+                "received_date":"2021-08-25"
+            },
+            {
+                "reference":"007-01819-0002-019",
+                "ean":"5059626112753",
+                "qnt_expected":59,
+                "qnt_accepted":56,
+                "qnt_not_accepted":3,
+                "received_date":"2021-08-25"
+            }
+        ]
+    }
+}

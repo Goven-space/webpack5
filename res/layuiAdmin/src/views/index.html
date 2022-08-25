@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>layuiAdmin std - 通用后台管理模板系统（iframe版）</title>
+        <meta name="renderer" content="webkit" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0"
+        />
+        <link rel="stylesheet" href="../layuiadmin/layui/css/layui.css" media="all" />
+        <link rel="stylesheet" href="../layuiadmin/style/admin.css" media="all" />
+        <style>
+            .layadmin-side-shrink .layui-layout-admin .layui-logo {
+                background-image: none;
+            }
+            .layadmin-side-shrink .layui-layout-admin .layui-logo img {
+                height: 70%;
+                transform: translateX(-11px);
+            }
+            .layui-logo img {
+                height: 80%;
+            }
+            .modal-content{
+                padding: 15px;
+            }
+            .form-tips{
+                margin-left: 110px;
+                font-size: 12px;
+                color: rgba(0,0,0,.45);
+            }
+            .breadcrumb-list{
+                position: fixed;
+                top: 50px;
+                right: 0;
+                z-index: 999;
+            }
+        </style>
+    </head>
+    <body class="layui-layout-body">
+        <div id="LAY_app" class="layadmin-tabspage-none">
+            <div class="layui-layout layui-layout-admin">
+                <div class="layui-header">
+                    <!-- 头部区域 -->
+                    <ul class="layui-nav layui-layout-left">
+                        <li class="layui-nav-item layadmin-flexible" lay-unselect>
+                            <a href="javascript:;" layadmin-event="flexible" title="侧边伸缩">
+                                <i class="layui-icon layui-icon-shrink-right" id="LAY_app_flexible"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="layui-nav layui-layout-right" lay-filter="layadmin-layout-right">
+                        <li class="layui-nav-item" lay-unselect>
+                            <a href="javascript:;">
+                                <cite class="username">tester</cite>
+                            </a>
+                            <!-- <dl class="layui-nav-child">
+                                <dd><a lay-href="set/user/info.html">基本资料</a></dd>
+                                <dd><a lay-href="set/user/password.html">修改密码</a></dd>
+                            </dl> -->
+                        </li>
+                        <li class="layui-nav-item" lay-unselect>
+                            <a lay-href="app/message/index.html" layadmin-event="message" lay-text="消息中心">
+                                <i class="layui-icon layui-icon-notice"></i>
+
+                                <!-- 如果有新消息，则显示小圆点 -->
+                                <span class="layui-badge-dot"></span>
+                            </a>
+                        </li>
+                        <li class="layui-nav-item change-service-btn" lay-unselect>
+                            <a href="javascript:;">
+                                <i class="layui-icon layui-icon-refresh-1"></i>
+                                切换
+                            </a>
+                        </li>
+                        <li class="layui-nav-item logout-btn" lay-unselect>
+                            <a href="javascript:;"><i class="layui-icon layui-icon-logout"></i>退出</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 侧边菜单 -->
+                <div class="layui-side layui-side-menu">
+                    <div class="layui-side-scroll">
+                        <div class="layui-logo">
+                            <img
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKoAAAAtCAYAAAA+w/DiAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjczNTJGMjVGNEUxMTExRTk5QkE5RjdFOEFFOUU0QjUxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjczNTJGMjYwNEUxMTExRTk5QkE5RjdFOEFFOUU0QjUxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NzM1MkYyNUQ0RTExMTFFOTlCQTlGN0U4QUU5RTRCNTEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NzM1MkYyNUU0RTExMTFFOTlCQTlGN0U4QUU5RTRCNTEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7TCtlqAAALMUlEQVR42uxdCZBUxRnu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"
+                                alt="RestCloud LOGO"
+                            />
+                        </div>
+
+                        <ul
+                            class="layui-nav layui-nav-tree menu-list"
+                            lay-shrink="all"
+                            id="LAY-system-side-menu"
+                            lay-filter="layadmin-system-side-menu"
+                        >
+                            <!-- <li data-name="home" class="layui-nav-item layui-nav-itemed">
+                              <a href="javascript:;" lay-tips="主页" lay-direction="2">
+                                <i class="layui-icon layui-icon-home"></i>
+                                <cite>主页</cite>
+                              </a>
+                              <dl class="layui-nav-child">
+                                <dd data-name="console" class="layui-this">
+                                  <a lay-href="home/console.html">控制台</a>
+                                </dd>
+                              </dl>
+                            </li>-->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 页面标签 -->
+                
+                <!-- <div class="layadmin-pagetabs" id="LAY_app_tabs">
+                    <div class="layui-icon layadmin-tabs-control layui-icon-prev" layadmin-event="leftPage"></div>
+                    <div class="layui-icon layadmin-tabs-control layui-icon-next" layadmin-event="rightPage"></div>
+                    <div class="layui-icon layadmin-tabs-control layui-icon-down">
+                        <ul class="layui-nav layadmin-tabs-select" lay-filter="layadmin-pagetabs-nav">
+                            <li class="layui-nav-item" lay-unselect>
+                                <a href="javascript:;"></a>
+                                <dl class="layui-nav-child layui-anim-fadein">
+                                    <dd layadmin-event="closeThisTabs"><a href="javascript:;">关闭当前标签页</a></dd>
+                                    <dd layadmin-event="closeOtherTabs"><a href="javascript:;">关闭其它标签页</a></dd>
+                                    <dd layadmin-event="closeAllTabs"><a href="javascript:;">关闭全部标签页</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="layui-tab" lay-unauto lay-allowClose="true" lay-filter="layadmin-layout-tabs">
+                        <ul class="layui-tab-title" id="LAY_app_tabsheader">
+                            <li lay-id="home/console.html" lay-attr="home/console.html" class="layui-this">
+                                <i class="layui-icon layui-icon-home"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div> -->
+
+                <!-- 主体内容 -->
+                <div class="layui-body" id="LAY_app_body">
+                    <div class="layui-card layadmin-header">
+                        <div class="layui-breadcrumb">
+                            <a><cite>首页</cite></a>
+                        </div>
+                    </div>
+                    <div style="position: relative;height: 100%;">
+                        <div class="layadmin-tabsbody-item layui-show">
+                            <iframe src="home/console.html" frameborder="0" class="layadmin-iframe"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 辅助元素，一般用于移动设备下遮罩 -->
+                <div class="layadmin-body-shade" layadmin-event="shade"></div>
+            </div>
+        </div>
+
+        <script src="../layuiadmin/layui/layui.js"></script>
+        <script src="./script/jquery.min.js"></script>
+        <script src="./script/axios.min.js"></script>
+        <script src="./script/api.js"></script>
+        <script src="./script/apiList/menu.js"></script>
+        <script>
+            layui
+                .config({
+                    base: "../layuiadmin/", //静态资源所在路径
+                })
+                .extend({
+                    index: "lib/index", //主入口模块
+                })
+                .use("index");
+        </script>
+        <script>
+            $(function () {
+                const username = localStorage.getItem('userName')
+                $('.username').html(username)
+                let modalIndex;
+                menuList({
+                    categoryId: "core.discovery",
+                    pageSize: 15,
+                    pageNo: 1,
+                }).then(res => {
+                    const { rows } = res.data;
+                    let str = "";
+                    rows.forEach((item, index) => {
+                        str += `
+                            <li data-name="home" class="layui-nav-item${index === 0 ? " layui-nav-itemed" : ""}">
+                                <a href="javascript:;" lay-tips="${item.menuName}" lay-direction="2">
+                                    <i class="layui-icon layui-icon-${item.value}"></i>
+                                    <cite>${item.menuName}</cite>
+                                </a>
+                            </li>
+                        `;
+                    });
+                    $(".menu-list").html(str);
+                });
+                $('.change-service-btn').click(function (){
+                    modalIndex = layer.open({
+                        type: 1, 
+                        title: '切换服务器',
+                        area: '550px',
+                        content: `
+                            <div class="modal-content">
+                                <form class="layui-form">
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label"><span style="color: #f00;">*</span>服务器地址</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" name="url" placeholder="请输入服务器URL" autocomplete="off" class="layui-input service-url">
+                                        </div>
+                                        <p class="form-tips">请选择或填写要链接的服务器的Host如:http://localhost:8080/restcloud</p>
+                                    </div>
+                                    <div class="layui-form-item">
+                                        <button class="layui-btn layui-btn-normal change-service" lay-submit lay-filter="url" style="margin-left: 110px;">切换服务器</button>
+                                        <button class="layui-btn layui-btn-primary modal-close">取消</button>
+                                    </div>
+                                </form>    
+                            </div>
+                        `
+                    });
+                    layui.use('form', function(){
+                        var form = layui.form;
+                        form.on('submit(url)', function(data){
+                            const { url } = data.field;
+                            if(url === ''){
+                                $('.service-url').css({borderColor: '#f00'});
+                                $('.form-tips').css({color: '#f00'});
+                            }
+                            return false;
+                        });
+                    });
+                    $('.service-url').focus(function (){
+                        $('.service-url').css({borderColor: '#eee !important'});
+                        $('.form-tips').css({color: 'rgba(0,0,0,.45)'});
+                    })
+                    $('.modal-close').one('click',function (){
+                        layer.close(modalIndex);
+                        return false;
+                    })
+                })
+                $('.logout-btn').click(function (){
+                    localStorage.removeItem('identitytoken')
+                    location.href = 'user/login.html';
+                })
+            });
+        </script>
+    </body>
+</html>

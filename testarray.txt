@@ -1,0 +1,26 @@
+﻿{
+    "data":[
+        {
+            "gender":1,
+            "tel":136320012345,
+            "totaly":1,
+            "age":35,
+            "salary":4,
+            "ctd":"restcloud",
+            "address":"上海",
+            "userName":"管理员",
+            "userId":"admin"
+        },
+        {
+            "gender":0,
+            "tel":15612356789,
+            "totaly":2,
+            "age":25,
+            "salary":15,
+            "ctd":"restcloud",
+            "address":"广州",
+            "userName":"测试员",
+            "userId":"test"
+        }
+    ]
+}

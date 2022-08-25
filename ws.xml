@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<soap:Body>
+<EvectionApplyResponse xmlns="http://tempuri.org/">
+<EvectionApplyResult>
+<Sucess>true</Sucess>
+<FlowID>69</FlowID>
+<FlowInstanceID>4828b088c7044b9982a393038c4792c0</FlowInstanceID>
+<SequenceNo>EVH-20220620000001</SequenceNo>
+<BizObjectId>221291a15f744f2aad2dc19d06a26253</BizObjectId>
+<ExceptionMessage>流程发起成功。流程实例id =
+4828b088c7044b9982a393038c4792c0</ExceptionMessage>
+<ProcessTime>2022-06-20 19:07:52</ProcessTime>
+<ApproveData>
+<SysName xmlns="">ATL</SysName>
+<I_ZAPPRREC xmlns="">
+<FLOW_INST_ID>4828b088c7044b9982a393038c4792c0</FLOW_INST_ID>
+<URL>http%3a%2f%2fqflowuat.atlbattery.com%2fform%2fdetail%3fworkflowInstanceId%
+3d4828b088c7044b9982a393038c4792c0</URL>
+</I_ZAPPRREC>
+</ApproveData>
+</EvectionApplyResult>
+</EvectionApplyResponse>
+</soap:Body>
+</soap:Envelope>

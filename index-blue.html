@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="/index.css"/>
+	<link rel="icon" sizes="any" mask href="/res/iconres/restcloud.ico">
+    <style>
+    .ant-menu{background:#2a75ba;}
+    .ant-menu-item{color:#fff}
+    .ant-menu-item:hover{color:#f3fc07}
+    .ant-menu-item-selected{color:#000}
+    .ant-menu-submenu-title{color:#fff}
+    .ant-menu-submenu-title:hover{color:#f3fc07}
+	.ant-menu-sub{background:#215e96 !important;}
+	.ant-menu-item-selected{color:#000 !important;}
+	.monitorlogo-w {background-image:url(../../res/iconres/images/logo-w-data.png);}
+    </style>
+
+    <title>iPaaS混合集成中台</title>
+	<script>
+		var appPath="/restcloud"; //客户端UI的根路径，浏览地址栏中用来匹配路由的路径
+		var resHost="http://localhost:8080"; //服务端res资源文件所在路径
+		var host="http://localhost:8080/restcloud"; //指后端API服务的访问根路径
+		var currentServerHost=localStorage.getItem("currentServerHost"); //从最后一个登录成功的地址中取
+		if(currentServerHost!=null){
+		  host=currentServerHost;
+		  var epos=currentServerHost.lastIndexOf("/");
+		  resHost=currentServerHost.substring(0,epos);
+		}
+		var SystemTheme="blue";
+		var webappsProjectName="";
+		var LOGINSPAN=8;
+		var LOGINBGURL="/res/iconres/images/login-bg-ht.png";
+		var LOGINLOGOURL="/res/iconres/images/logo-data.png";
+		</script>
+</head>
+<body>
+<div id="content"></div>
+</body>
+<script src="/common.js"></script>
+<script src="/index.js"></script>
+</html>

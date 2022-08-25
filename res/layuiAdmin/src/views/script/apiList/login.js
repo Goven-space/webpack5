@@ -1,0 +1,1 @@
+const login = (params) => post('/rest/core/auth/login', params)

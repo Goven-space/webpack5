@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="/index.css"/>
+	<link rel="icon" sizes="any" mask href="/res/iconres/restcloud.ico">
+    <style>
+	.title-menu-min::-webkit-scrollbar {width: 1px; height: 0;}
+	.monitorlogo-w{background-image:url(../../res/iconres/images/more/mobile.png);}
+	}
+    </style>
+    <title>政企能力平台-运营子平台</title>
+	<script>
+		var appPath="/restcloud"; //客户端UI的根路径，浏览地址栏中用来匹配路由的路径
+		var resHost="http://localhost:8080"; //服务端res资源文件所在路径
+		var host="http://localhost:8080/restcloud"; //指后端API服务的访问根路径
+		var currentServerHost=localStorage.getItem("currentServerHost"); //从最后一个登录成功的地址中取
+		if(currentServerHost!=null){
+		  host=currentServerHost;
+		  var epos=currentServerHost.lastIndexOf("/");
+		  resHost=currentServerHost.substring(0,epos);
+		}
+		var SystemTheme="dark";
+		var webappsProjectName="";
+		var LOGINBGURL="/res/iconres/images/login-bg.png";
+		var LOGINLOGOURL="/res/iconres/images/more/mobile.png";
+		var ApiDefaultAuthType=1; //API新增时的默认认证方式
+	    var LogoutRedirectUrl=""; //用户点击退出时直接跳转到这个页面
+		</script>
+</head>
+<body>
+<div id="content"></div>
+</body>
+<script src="/common.js"></script>
+<script src="/index.js"></script>
+</html>

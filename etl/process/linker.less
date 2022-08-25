@@ -1,0 +1,198 @@
+.linker-list{
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 0 15px;
+    .linker-item{
+        padding: 5px;
+        cursor: pointer;
+        &:not(:last-child){
+            margin-bottom: 15px;
+        }
+        &:hover{
+            background: #e6f7ff;
+        }
+        img{
+            width: 16px;
+            height: 16px;
+            margin-right: 10px;
+        }
+    }
+}
+.modules-wrapper{
+    width: 100%;
+    overflow: hidden;
+    .modules-scroll{
+        display: flex;
+        width: 200%;
+        transition: .3s all;
+        .modules-item{
+            width: 50%;
+            max-height: 400px;
+            overflow-y: auto;
+            .ant-menu-vertical .ant-menu-item.ant-menu-item-selected::after{
+                opacity: 1;
+                transform: scale(1);
+            }
+            .modules-row, .modules-col, .modules-api-menu{
+                height: 100%;
+            }
+            .modules-api-body{
+                padding: 0 20px;
+                height: 100%;
+                .modules-api-search .ant-input{
+                    border-radius: 0;
+                }
+                .modules-api-list{
+                    height: calc(100% - 32px);
+                    padding-left: 0;
+                    margin-bottom: 0;
+                    list-style: none;
+                    border: 1px solid #d9d9d9;
+                    border-top: none;
+                    overflow-y: auto;
+                    li{
+                        padding: 7px 15px;
+                        cursor: pointer;
+                        &:hover{
+                            background: #e6f7ff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.appflow-alert{
+    border-radius: 0;
+    .appflow-alert-msg{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #108EE9
+    }
+}
+.appflow-wrapper{
+    .ant-tabs-bar{
+        margin-bottom: 0;
+    }
+}
+.appflow-collapse{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    .ant-collapse-item{
+        border-bottom: none;
+        &:last-child > .ant-collapse-content, &:last-child > .ant-collapse-header{
+            border-radius: 0;
+        }
+        .ant-collapse-header{
+            border-bottom: 1px solid #e8e8e8;
+        }
+        .ant-collapse-content{
+            border-top: none;
+        }
+        .ant-collapse-content-box{
+            padding-bottom: 0;
+        }
+    }
+}
+.appflow-create-config{
+    .appflow-create-config-row{
+        width: 100%;
+        display: flex;
+        .appflow-create-config-label{
+            width: 80px;
+        }
+        .appflow-create-config-input{
+            display: flex;
+            flex: auto;
+        }
+    }
+    .appflow-create-config-table{
+        .appflow-create-config-table-header{
+            display: flex;
+            border: 1px solid #ddd;
+            background: #F6F6F6;
+            margin-top: 15px;
+            div{
+                width: 50%;
+                height: 42px;
+                line-height: 42px;
+                text-align: center;
+            }
+        }
+        .appflow-create-config-table-row{
+            display: flex;
+            border: 1px solid #ddd;
+            border-top: none;
+            div{
+                width: 50%;
+                padding: 5px 5px 5px 0;
+                text-align: center;
+                line-height: 32px;
+            }
+        }
+    }
+}
+.appflow-view-config{
+    h5{
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .appflow-view-config-row{
+        display: flex;
+        .appflow-view-config-label{
+            width: 120px;
+            color: #999;
+        }
+    }
+    .appflow-view-config-table{
+        .appflow-view-config-table-header{
+            display: flex;
+            border: 1px solid #ddd;
+            background: #F6F6F6;
+            margin-top: 15px;
+            div{
+                width: 50%;
+                height: 42px;
+                line-height: 42px;
+                text-align: center;
+            }
+        }
+        .appflow-view-config-table-row{
+            display: flex;
+            border: 1px solid #ddd;
+            border-top: none;
+            div{
+                width: 50%;
+                padding: 5px 5px 5px 0;
+                text-align: center;
+                line-height: 32px;
+            }
+        }
+    }
+}
+.select-radio{
+    display: flex;
+    & > span:not(.ant-radio){
+        display: inline-flex;
+        flex: 1 auto;
+        justify-content: space-between;
+        & > span:first-child{
+            width: 60px;
+            text-overflow: ellipsis;
+            word-break: break-all;
+            overflow: hidden;
+        }
+    }
+}
+
+.editor-mode-row{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    label{
+        margin-right: 5px;
+    }
+}

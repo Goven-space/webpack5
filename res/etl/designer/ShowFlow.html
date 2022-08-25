@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>查看流程图</title>
+
+		<link rel="stylesheet" href="../css/node.css" />
+		<link rel="stylesheet" href="../../layui/css/layui.css" />
+		<link rel="stylesheet" href="../css/index.css" />
+		<link rel="stylesheet" href="../css/web.contextmenu.css" />
+
+		<style>
+			#Container {
+				height: 2300px;
+				width: 2000px;
+				overflow:no;
+				left:20px;
+				position:absolute;
+			}
+
+			.canvasClass{
+				height: 2300px;
+				width: 2000px;
+				overflow:no;
+			}
+
+			myConnectionAnimateClass: {
+				strokeStyle: '#f50',
+				stroke: '#f50',
+				strokeWidth: 4,
+				//fill: 'pink',
+				fillStyle: '#1e8151',
+				radius: 5
+			}
+
+		</style>
+
+	</head>
+
+	<body oncontextmenu="window.event.returnValue=false" >
+		<!-- 流程图绘制区域 -->
+		<div id="canvasId" class="canvasClass" style="top: 80px;">
+			<div id="Container"></div>
+		</div>
+	</body>
+
+	<!-- 注意Ready.js要放在最后面 -->
+	<script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../js/jsplumb.min.js"></script>
+	<script type="text/javascript" src="../../layui/layui.all.js"></script>
+	<script type="text/javascript" src="../js/web.contextmenu.js"></script>
+	<script type="text/javascript" src="../js/graphlib.min.js"></script>
+	<script type="text/javascript" src="../js/html2canvas.min.js"></script>
+	<script type="text/javascript" src="../js/canvg.js"></script>
+
+	<script type="text/javascript" src="../myjs/GlobalVar.js"></script>
+	<script type="text/javascript" src="../util/StringUtils.js"></script>
+	<script type="text/javascript" src="../util/GraphlibUtils.js"></script>
+	<script type="text/javascript" src="../util/LayuiUtils.js"></script>
+	<script type="text/javascript" src="../util/JsPlumbUtils.js"></script>
+	<script type="text/javascript" src="../myjs/MyLayui.js"></script>
+	<script type="text/javascript" src="../myjs/MonitorRightMenu.js"></script>
+	<script type="text/javascript" src="../myjs/MyFunction.js"></script>
+	<script type="text/javascript" src="../myjs/ShowFlowReady.js"></script>
+
+</html>

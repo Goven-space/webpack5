@@ -1,0 +1,215 @@
+.topHeaderText {
+  font-size: 20px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-left: 10px;
+  padding-left: 10px;
+  padding-bottom: 2px;
+  position: relative;
+}
+.monitorlogo {
+  height: 60px;
+  background-image: url(../../res/iconres/images/logo.png);
+  background-repeat: no-repeat;
+  background-position: 12px 8px;
+  margin: 0 0 0 0;
+}
+.monitorTrigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 16px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.monitorTrigger:hover {
+  color: #1890ff;
+}
+.monitorlogo-w {
+  height: 60px;
+  background-image: url(../../res/iconres/images/logo-w.png);
+  background-repeat: no-repeat;
+  background-position: 12px 8px;
+  margin: 0 0 0 0;
+}
+.monitorTrigger-w {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 16px;
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.3s;
+}
+.monitorTrigger-w:hover {
+  color: #1890ff;
+}
+.topHeaderButton {
+  border: none;
+  color: #ccc;
+  height: 36px;
+  border-radius: 2px;
+  padding: 0 10px;
+  line-height: 36px;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 0 10px 0 0;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.topHeaderButton:hover {
+  background-color: #108ee9;
+  color: #fff;
+}
+.topHeaderButton-b {
+  border: none;
+  color: #666;
+  height: 36px;
+  border-radius: 5px;
+  padding: 0 10px;
+  line-height: 36px;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 0 10px 0 0;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.topHeaderButton-b:hover {
+  background-color: #108ee9;
+  color: #fff;
+}
+.topHeaderButton-blue {
+  border: none;
+  color: #fff;
+  height: 36px;
+  border-radius: 5px;
+  padding: 0 10px;
+  line-height: 36px;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 0 10px 0 0;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.topHeaderButton-blue:hover {
+  background-color: #f4f4f4;
+  color: #000;
+}
+.title-menu-min {
+  overflow-x: hidden !important;
+}
+.title-menu-min::-webkit-scrollbar {
+  width: 1px;
+  height: 0;
+}
+.title-menu-min::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 5px #f4f4f4;
+  background: #999;
+}
+.title-menu-min::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  -webkit-box-shadow: inset 0 0 5px #f4f4f4;
+  border-radius: 0;
+  background: #fff;
+}
+.title-menu-min-w {
+  overflow-x: hidden !important;
+}
+.title-menu-min-w::-webkit-scrollbar {
+  width: 1px;
+  height: 0;
+}
+.title-menu-min-w::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 5px #fff;
+  background: #999;
+}
+.title-menu-min-w::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  -webkit-box-shadow: inset 0 0 5px #fff;
+  border-radius: 0;
+  background: #fff;
+}
+.apidoc table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-left: 1px solid #f4f4f4;
+  border-top: 1px solid #f4f4f4;
+  background: #fff;
+  width: 100%;
+}
+.apidoc th {
+  font-weight: bold;
+  background: #f8f8f8;
+  border-right: 1px solid #f4f4f4;
+  border-bottom: 1px solid #f4f4f4;
+  padding: 5px 15px;
+  font-size: '9pt';
+  height: 36px;
+  text-align: left;
+}
+.apidoc tr:hover {
+  background: #fafafa;
+}
+.apidoc td {
+  border-right: 1px solid #f4f4f4;
+  border-bottom: 1px solid #f4f4f4;
+  padding: 5px 15px;
+  font-size: '9pt';
+  height: 36px;
+}
+.apidoc a:hover {
+  text-decoration: underline;
+}
+.apiTotalDiv {
+  background: #f8f8f8;
+  height: 110px;
+  width: 165px;
+}
+.apiTotalDiv:hover {
+  background: #99CCFF;
+}
+.breadcrumb-style {
+  margin: 10px 0 -4px 0;
+  padding: 64px 15px 15px;
+}
+.portal-breadcrumb-style {
+  margin: 10px 0 -4px 0;
+  padding: 10px 15px 15px;
+}
+.main-content-style {
+  min-height: 600px;
+  margin: 1px 16px;
+  padding: 15px 24px;
+  background: #fff;
+  border-radius: 5px;
+}
+.string-value {
+  word-break: break-all;
+}
+@media screen and (min-width: 1316px) {
+  .header-userInfo {
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 1315px) {
+  .header-userInfo {
+    display: none;
+  }
+}
